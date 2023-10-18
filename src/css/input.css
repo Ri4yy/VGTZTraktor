@@ -6,15 +6,52 @@ body {
     @apply flex flex-col min-h-screen
 }
 .container {
-    @apply max-[1920px]:max-w-[1140px] mx-auto
+    @apply max-[1920px]:max-w-[1180px] mx-auto
 }
 footer {
     @apply mt-auto
 }
-a, p, button, li {
+a, button, li {
     @apply !leading-none
 }
 
 .link-hover {
     @apply text-base font-bold relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-mainRed after:rounded-full hover:after:w-full hover:text-mainRed after:transition-all after:duration-300 transition-colors duration-300
+}
+
+.btn-hover {
+    @apply bg-mainRed text-white hover:bg-transparent hover:text-mainRed border border-mainRed transition-colors duration-300 uppercase rounded-md
+}
+
+.active-tab {
+    @apply !bg-mainRed !text-white
+}
+
+.tabs__caption li {
+    @apply px-5 py-2.5 rounded-md bg-[#F0F0F0] text-black text-sm font-bold w-fit uppercase whitespace-nowrap cursor-pointer
+}
+
+/* Checkbox */
+.custom-checkbox {
+    @apply absolute -z-[1] opacity-0;
+}
+
+.custom-checkbox + label {
+    @apply inline-flex items-center select-none;
+}
+
+.custom-checkbox + label::before {
+    @apply content-[''] inline-block w-4 h-4 shrink-0 grow-0 border bg-no-repeat bg-center mr-3 rounded-md border-solid border-white;
+}
+
+.custom-checkbox:focus:not(:checked) + label::before {
+    @apply border-white;
+}
+
+.custom-checkbox:checked + label::before {
+    @apply bg-mainRed border-white 
+}
+
+.custom-checkbox:disabled + label::before {
+    @apply bg-white;
 }

@@ -26,3 +26,10 @@
 		url('../fonts/OpenSans-Bold.ttf') format('truetype');
 	font-display: swap;
 }
+@font-face {
+	font-family: 'Open Sans';
+	font-weight: 900;
+	src: local('Open Sans'),
+		url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+	font-display: swap;
+}
