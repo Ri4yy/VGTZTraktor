@@ -16,7 +16,7 @@ a, button, li {
 }
 
 .second-title {
-    @apply text-4xl font-extrabold
+    @apply lg:text-4xl md:text-3xl text-2xl font-extrabold
 }
 
 .link-hover {
@@ -32,19 +32,19 @@ a, button, li {
 }
 
 .tabs__caption li {
-    @apply px-5 py-2.5 rounded-md bg-[#F0F0F0] text-black text-sm font-bold w-fit uppercase whitespace-nowrap cursor-pointer
+    @apply md:px-5 px-4 py-2.5 rounded-md bg-[#F0F0F0] text-black md:text-sm text-xs font-bold w-fit uppercase whitespace-nowrap cursor-pointer
 }
 
 .zakupki-list li {
-    @apply text-lg text-white font-semibold flex items-center last:items-start gap-3 before:bg-mainRed before:w-3 before:h-3 before:shrink-0 before:rounded-full last:before:mt-1 last:!leading-[1.2] 
+    @apply md:text-lg text-[13px] text-white font-semibold flex items-start gap-3 before:bg-mainRed before:w-3 before:h-3 before:shrink-0 before:rounded-full max-md:before:mt-0.5 before:mt-1 last:!leading-[1.2] 
 }
 
 .adv-list li {
-    @apply text-sm font-medium flex items-center gap-2 before:bg-mainRed before:w-2 before:h-2 before:shrink-0 before:rounded-full !leading-[1.2] 
+    @apply lg:text-sm text-xs font-medium flex items-center gap-2 before:bg-mainRed before:w-2 before:h-2 before:shrink-0 before:rounded-full !leading-[1.2] 
 }
 
 .footer-list li {
-    @apply text-sm font-semibold text-white
+    @apply xs:text-sm text-base font-semibold text-white
 }
 
 .footer-list__link {

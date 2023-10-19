@@ -1,12 +1,13 @@
 @layer base, vendors, components;
 
 @import url('swiper.css') layer(vendors);
-@import url('tailwindElements.css');
+/* @import url('tailwindElements.css'); */
 
 @layer components {
     html,
     body {
         font-family: 'Open Sans', sans-serif;
+        overflow-x: hidden;
     }
 
     .swiper-pagination > .swiper-pagination-bullet {
@@ -23,14 +24,17 @@
         border-radius: 10px;
         background-color: #D53029;
     }
-    .swiper-pagination-partners > .swiper-pagination-bullet {
+    .swiper-pagination-partners > .swiper-pagination-bullet,
+    .swiper-pagination-news > .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
         background-color: #D9D9D9;
         opacity: 1;
     }
     
-    .swiper-pagination-partners > .swiper-pagination-bullet-active {
+    .swiper-pagination-partners > .swiper-pagination-bullet-active,
+    .swiper-pagination-news > .swiper-pagination-bullet-active
+     {
         width: 34px;
         height: 10px;
         border-radius: 10px;

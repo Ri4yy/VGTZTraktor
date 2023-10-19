@@ -1,18 +1,22 @@
 (function ($) {
     $(function () {
-        $('#openMenu').click(() => {
-            $('#openMenu').toggleClass('after:top-0');
+        $('#openMenu, .overlay').click(() => {
             $('#openMenu').toggleClass('before:bottom-0');
+            $('#openMenu').toggleClass('after:top-0');
             $('#openMenu').toggleClass('after:rotate-45');
             $('#openMenu').toggleClass('before:-rotate-45');
+            
+            $('html').toggleClass('overflow-hidden');
+            $('.overlay').toggleClass('opacity-0');
+            $('.overlay').toggleClass('pointer-events-none');
+
             $('#openMenu').find('span').toggleClass('translate-x-full');
+            $('#mobileMenu').toggleClass('translate-x-full');
         }); 
 
         $('.dropdown-btn').click(() => {
-            $('.dropdown-menu').toggleClass('hidden');
-            $('.dropdown-menu').toggleClass('flex');
+            $('.dropdown-menu').slideToggle();
 
-            $('.dropdown-menu').toggleClass('mt-4');
             $('.dropdown-btn').toggleClass('after:rotate-180');
         });
     });

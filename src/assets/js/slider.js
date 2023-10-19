@@ -21,7 +21,8 @@ const swiperLizing = new Swiper('.swiper-lizing', {
     breakpoints: {
       320: {
         allowTouchMove: true,
-        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesPerView: 2,
         grid: {
           rows: 1,
           fill: "row",
@@ -30,7 +31,7 @@ const swiperLizing = new Swiper('.swiper-lizing', {
       480: {
         allowTouchMove: true,
         spaceBetween: 20,
-        slidesPerView: 3,
+        slidesPerView: 4,
         grid: {
           rows: 1,
           fill: "row",
@@ -39,7 +40,7 @@ const swiperLizing = new Swiper('.swiper-lizing', {
       768: {
         allowTouchMove: true,
         spaceBetween: 40,
-        slidesPerView: 4,
+        slidesPerView: 5,
         grid: {
           rows: 1,
           fill: "row",
@@ -75,10 +76,62 @@ const swiperLizing = new Swiper('.swiper-lizing', {
     pagination: {
         el: '.swiper-pagination-partners',
     },
+});
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.main-button-next',
-        prevEl: '.main-button-prev',
+
+const swiperNews = new Swiper('.swiper-news', {
+    spaceBetween: 40,
+    enabled: true,
+
+    breakpoints: {
+      320: {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 1.3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      480: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 2.5,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      700: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      900: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 4,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      1024: {
+        allowTouchMove: true,
+        slidesPerView: 2,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+    },
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination-news',
     },
 });
