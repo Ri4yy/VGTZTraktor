@@ -27,12 +27,20 @@ a, button, li {
     @apply bg-mainRed text-white hover:bg-transparent hover:text-mainRed border border-mainRed transition-colors duration-300 uppercase rounded-md
 }
 
+.nav-item__hover {
+    @apply text-sm font-semibold text-white uppercase block p-[14px] relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:rounded-full hover:after:w-full after:transition-all after:duration-300 transition-colors duration-300
+}
+
+.dropdown-item__hover {
+    @apply text-sm text-white font-medium uppercase whitespace-nowrap relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 after:bg-white after:rounded-full hover:after:w-full after:transition-all after:duration-300 transition-colors duration-300
+}
+
 .active-tab {
     @apply !bg-mainRed !text-white
 }
 
 .tabs__caption li {
-    @apply md:px-5 px-4 py-2.5 rounded-md bg-[#F0F0F0] text-black md:text-sm text-xs font-bold w-fit uppercase whitespace-nowrap cursor-pointer
+    @apply md:px-5 px-4 py-2.5 rounded-md bg-[#F0F0F0] text-black md:text-sm text-xs font-bold w-fit uppercase whitespace-nowrap cursor-pointer grow text-center min-[930px]:last:grow-0
 }
 
 .zakupki-list li {
