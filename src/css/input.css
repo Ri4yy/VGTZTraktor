@@ -39,8 +39,15 @@ a, button, li {
     @apply !bg-mainRed !text-white
 }
 
+.active-tab__char {
+    @apply !bg-mainRed !text-white
+}
+
 .tabs__caption li {
     @apply md:px-5 px-4 py-2.5 rounded-md bg-[#F0F0F0] text-black md:text-sm text-xs font-bold w-fit uppercase whitespace-nowrap cursor-pointer grow text-center min-[930px]:last:grow-0
+}
+.tabs-char__caption li {
+    @apply px-6 py-2.5 xs:py-3.5 rounded-md bg-[#F0F0F0] text-black md:text-sm text-xs font-semibold w-fit uppercase whitespace-nowrap cursor-pointer grow text-center
 }
 
 .zakupki-list li {
@@ -58,6 +65,16 @@ a, button, li {
 .footer-list__link {
     @apply relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 after:bg-mainRed after:rounded-full hover:after:w-full hover:text-mainRed after:transition-all after:duration-300 transition-colors duration-300
 }
+
+.char-left__column {
+    @apply py-2 px-2.5 border-r border-[#F0F0F0]
+}
+
+.char-right__column {
+    @apply py-2 px-2.5 border-l border-[#F0F0F0] flex items-center
+}
+
+
 /* Checkbox */
 .custom-checkbox {
     @apply absolute -z-[1] opacity-0;
@@ -81,4 +98,13 @@ a, button, li {
 
 .custom-checkbox:disabled + label::before {
     @apply bg-white;
+}
+
+/* Popup */
+.popup-fade {
+    @apply hidden before:content-[''] before:fixed before:w-full before:h-full before:opacity-70 before:z-[9999] before:left-0 before:top-0 before:bg-black;
+}
+
+.popup {
+    @apply fixed min-[1180px]:w-[1140px] w-[90%] border rounded z-[99999] opacity-100 left-1/2 -translate-x-1/2 top-[50px] bottom-0 bg-white overflow-y-hidden;
 }

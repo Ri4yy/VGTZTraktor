@@ -1,5 +1,7 @@
 const swiperHero = new Swiper('.swiper-hero', {
-    // Optional parameters
+    autoplay: {                         
+        delay: 5000,  
+    },   
     loop: true,
 
     // If we need pagination
@@ -135,3 +137,46 @@ const swiperNews = new Swiper('.swiper-news', {
         el: '.swiper-pagination-news',
     },
 });
+
+const swiper_thumbnail = new Swiper(".swiper-thumbnail", {
+    slidesPerView: 4,
+    direction: 'horizontal',
+    breakpoints: {
+        320: {
+          allowTouchMove: true,
+          direction: 'vertical',
+          slidesPerView: 3,
+        },
+        768: {
+          allowTouchMove: true,
+          direction: 'vertical',
+          slidesPerView: 3,
+        },
+        1024: {
+          allowTouchMove: true,
+          direction: 'horizontal',
+          slidesPerView: 3,
+        },
+        1180: {
+          allowTouchMove: true,
+          direction: 'horizontal',
+          spaceBetween: 24,
+          slidesPerView: 4,
+        },
+        1921: {
+          allowTouchMove: true,
+          direction: 'horizontal',
+          spaceBetween: 24,
+          slidesPerView: 5,
+        },
+    }
+})
+const swiperDetail = new Swiper('.swiper-detail-card', {       
+    pagination: {
+        el: '.swiper-pagination-detail',
+    },
+    thumbs: {
+      swiper: swiper_thumbnail,
+    },
+
+})
