@@ -66,7 +66,7 @@ const swiperLizing = new Swiper('.swiper-lizing', {
       },
       1921: {
         allowTouchMove: true,
-        slidesPerView: 5,
+        slidesPerView: 6,
         grid: {
           rows: 2,
           fill: "row",
