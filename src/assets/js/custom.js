@@ -1,8 +1,8 @@
 (function ($) {
     $('#openMenu, .overlay').click(() => {
-        $('#openMenu').find('span').eq(0).toggleClass('rotate-45');
+        $('#openMenu').find('span').eq(0).toggleClass('rotate-left');
         $('#openMenu').find('span').eq(0).toggleClass('top-0');
-        $('#openMenu').find('span').eq(2).toggleClass('-rotate-45');
+        $('#openMenu').find('span').eq(2).toggleClass('rotate-right');
         $('#openMenu').find('span').eq(2).toggleClass('bottom-0');
         
         $('html').toggleClass('overflow-hidden');
@@ -16,7 +16,7 @@
     $('.dropdown-btn').click(() => {
         $('.dropdown-menu').slideToggle();
     
-        $('.dropdown-btn').toggleClass('after:rotate-180');
+        $('.dropdown-btn').find('img').toggleClass('rotate-dropdown__arrow');
     });
 
     $(function () {

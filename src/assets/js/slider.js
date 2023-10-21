@@ -79,10 +79,65 @@ const swiperLizing = new Swiper('.swiper-lizing', {
         el: '.swiper-pagination-partners',
     },
 });
+const swiperCompany = new Swiper('.swiper-company', {
+    spaceBetween: 40,
+    enabled: true,
+
+    breakpoints: {
+      320: {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      480: {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 4,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      768: {
+        allowTouchMove: true,
+        spaceBetween: 40,
+        slidesPerView: 5,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      1024: {
+        allowTouchMove: true,
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+      1280: {
+        allowTouchMove: true,
+        slidesPerView: 6,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+    },
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination-partners',
+    },
+});
 
 
 const swiperNews = new Swiper('.swiper-news', {
-    spaceBetween: 40,
+    spaceBetween: 24,
     enabled: true,
 
     breakpoints: {
@@ -98,7 +153,16 @@ const swiperNews = new Swiper('.swiper-news', {
       480: {
         allowTouchMove: true,
         spaceBetween: 16,
-        slidesPerView: 2.5,
+        slidesPerView: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      500: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 2.3,
         grid: {
           rows: 1,
           fill: "row",
@@ -137,6 +201,73 @@ const swiperNews = new Swiper('.swiper-news', {
         el: '.swiper-pagination-news',
     },
 });
+
+const swiperNewsRelated = new Swiper('.swiper-news-related', {
+    spaceBetween: 24,
+    enabled: true,
+
+    breakpoints: {
+      320: {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 1.3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      480: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      500: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 2.3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      700: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      900: {
+        allowTouchMove: true,
+        spaceBetween: 16,
+        slidesPerView: 4,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      1024: {
+        allowTouchMove: true,
+        slidesPerView: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+    },
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination-news',
+    },
+});
+
 
 const swiper_thumbnail = new Swiper(".swiper-thumbnail", {
     slidesPerView: 4,

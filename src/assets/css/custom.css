@@ -8,6 +8,7 @@
     body {
         font-family: 'Open Sans', sans-serif;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     .swiper-pagination > .swiper-pagination-bullet {
@@ -53,6 +54,15 @@
         outline: 1px solid #D53029;
         outline-offset: -2px;
     }
+}
+.rotate-left {
+    transform: rotate(45deg);
+}
+.rotate-right {
+    transform: rotate(-45deg);
+}
+.rotate-dropdown__arrow {
+    transform: rotate(180deg);
 }
 
 .tabs__content {
