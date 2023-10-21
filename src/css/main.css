@@ -707,6 +707,10 @@ video {
   margin-top: auto;
 }
 
+.mt-\[18px\] {
+  margin-top: 18px;
+}
+
 .block {
   display: block;
 }
@@ -796,6 +800,10 @@ video {
   height: 100vh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -835,6 +843,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[220px\] {
+  width: 220px;
 }
 
 .max-w-\[400px\] {
@@ -1261,6 +1273,10 @@ video {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pt-\[90px\] {
+  padding-top: 90px;
 }
 
 .text-center {
@@ -2290,6 +2306,11 @@ a, button, li {
     padding-bottom: 5rem;
   }
 
+  .max-md\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .max-md\:text-center {
     text-align: center;
   }
@@ -2511,6 +2532,21 @@ a, button, li {
     bottom: -4rem;
   }
 
+  .xs\:after\:right-0::after {
+    content: var(--tw-content);
+    right: 0px;
+  }
+
+  .xs\:after\:-bottom-0::after {
+    content: var(--tw-content);
+    bottom: -0px;
+  }
+
+  .xs\:after\:bottom-0::after {
+    content: var(--tw-content);
+    bottom: 0px;
+  }
+
   .xs\:after\:h-\[200px\]::after {
     content: var(--tw-content);
     height: 200px;
@@ -2666,6 +2702,11 @@ a, button, li {
     gap: 18px;
   }
 
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .md\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -2742,6 +2783,10 @@ a, button, li {
 
   .lg\:h-\[calc\(100vh-172px\)\] {
     height: calc(100vh - 172px);
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:min-h-\[622px\] {
@@ -2843,6 +2888,10 @@ a, button, li {
     padding-left: 5rem;
   }
 
+  .lg\:pt-\[90px\] {
+    padding-top: 90px;
+  }
+
   .lg\:text-\[60px\] {
     font-size: 60px;
   }
@@ -2876,6 +2925,10 @@ a, button, li {
 
   .xl\:h-\[560px\] {
     height: 560px;
+  }
+
+  .xl\:h-full {
+    height: 100%;
   }
 
   .xl\:w-\[43\.5\%\] {

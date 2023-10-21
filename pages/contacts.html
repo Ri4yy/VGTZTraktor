@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/fonts.css">
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Трактора | Контакты</title>
+</head>
+<body>
+    <header class="flex flex-col relative">
+        <div class="flex items-center justify-between container lg:py-[18px] py-3">
+            <a href="/">
+                <img src="src/assets/img/icon/logo.svg" alt="">
+            </a>
+            <div class="flex flex-col gap-1.5 max-lg:hidden">
+                <p class="text-sm font-medium leading-none">Электронная почта</p>
+                <a href="mailto:vgtz-promtraktor@ya.ru" class="link-hover">vgtz-promtraktor@ya.ru</a>
+            </div>
+            <div class="flex flex-col gap-1.5 max-lg:hidden">
+                <p class="text-sm font-medium leading-none">Горячая линия</p>
+                <a href="tel:88006000908" class="link-hover">8 (800) 600 09 08</a>
+            </div>
+            <div class="flex flex-col gap-1 max-lg:hidden">
+                <p class="text-sm font-medium leading-none">Отдел продаж</p>
+                <a href="tel:88442605045" class="link-hover">8 (8442) 60 50 45</a>
+                <a href="tel:88442605044" class="link-hover">8 (8442) 60 50 44</a>
+            </div>
+            <button class="btn-hover text-sm font-medium px-[14px] py-3 max-lg:ml-auto max-lg:mr-10 max-[520px]:hidden">Оставить заявку</button>
+            <button class="lg:hidden flex flex-col justify-center w-5 h-[14px] overflow-hidden relative" id="openMenu">
+                <span class="w-full h-0.5 rounded-full bg-black transition-transform duration-300 origin-center absolute top-0 left-0"></span>
+                <span class="w-full h-0.5 rounded-full bg-black transition-transform duration-300"></span>
+                <span class="w-full h-0.5 rounded-full bg-black transition-transform duration-300 origin-center absolute bottom-0 left-0"></span>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="flex flex-col gap-9 absolute right-0 top-full xs:w-[350px] w-full bg-mainRed py-[62px] pb-20 z-50 lg:hidden h-screen translate-x-full transition-all duration-300 overflow-y-scroll" id="mobileMenu">
+            <ul class="flex flex-col gap-4 w-full">
+                <li>
+                    <a href="javascript:void(0)" class="dropdown-btn ml-[62px] text-sm font-bold text-white uppercase block relative w-fit after:absolute after:-right-5 after:top-1/2 after:-translate-y-1/2 after:bg-[url(../assets/img/icon/arrow-dropdown.png)] after:content-[''] after:h-1.5 after:w-3 after:bg-no-repeat after:bg-center after:transition-all">Наша техника</a>
+                    <ul class="dropdown-menu flex flex-col gap-4 px-[62px] py-4 border-y border-white w-full mt-4" style="display: none;">
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">ТРАКТОРЫ ДТ-75</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">ТРАКТОРЫ ВТГ-100 и ВТГ-90</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">АГРОМАШ 90-ТГ</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">отвалы</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">навесное оборудование</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">запасные части</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="px-[62px]">
+                    <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">Лизинг</a>
+                </li>
+                <li class="px-[62px]">
+                    <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">Госзакупка</a>
+                </li>
+                <li class="px-[62px]">
+                    <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">новости</a>
+                </li>
+                <li class="px-[62px]">
+                    <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">о компании</a>
+                </li>
+                <li class="px-[62px]">
+                    <a href="/" class="text-sm text-white font-bold uppercase whitespace-nowrap">Контакты</a>
+                </li>
+            </ul>
+            <div class="flex flex-col gap-[14px] px-[62px]">
+                <ul class="flex flex-col gap-1.5">
+                    <li class="text-sm font-semibold text-white">Электронная почта</li>
+                    <li>
+                        <a href="mailto:vgtz-promtraktor@ya.ru" class="text-base font-medium text-white w-fit !leading-[1.25]">vgtz-promtraktor@ya.ru</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-1.5">
+                    <li class="text-sm font-semibold text-white">Горячая линия</li>
+                    <li>
+                        <a href="tel:88006000908" class="text-base font-medium text-white w-fit !leading-[1.25]">8 (800) 600 09 08</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-1.5">
+                    <li class="text-sm font-semibold text-white">Отдел продаж</li>
+                    <li class="flex flex-col gap-1.5">
+                        <a href="tel:88442605045" class="text-base font-medium text-white w-fit !leading-[1.25]">8 (8442) 60 50 45</a>
+                        <a href="tel:88442605044" class="text-base font-medium text-white w-fit !leading-[1.25]">8 (8442) 60 50 44</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay opacity-0 lg:hidden fixed h-screen w-[100wh] backdrop-blur-sm bg-black/60 z-40 top-[71px] left-0 right-0 pointer-events-none transition-all duration-300"></div>
+
+        <!-- Desktop menu -->
+        <div class="bg-mainRed mx-auto w-full max-lg:hidden">
+            <ul class="flex items-center justify-center gap-3">
+                <li class="group relative">
+                    <a href="/" class="text-sm font-semibold text-white uppercase p-[14px] block relative after:absolute after:-right-1 after:top-1/2 after:-translate-y-1/2 after:bg-[url(../assets/img/icon/arrow-dropdown.png)] after:content-[''] after:h-1.5 after:w-3 after:bg-no-repeat after:bg-center after:transition-all group-hover:after:rotate-180">Наша техника</a>
+                    <ul class="hidden group-hover:flex flex-col gap-[14px] absolute left-0 py-4 px-[14px] bg-mainRed rounded-b-md z-20">
+                        <li>
+                            <a href="/" class="dropdown-item__hover">ТРАКТОРЫ ДТ-75</a>
+                        </li>
+                        <li>
+                            <a href="/" class="dropdown-item__hover">ТРАКТОРЫ ВТГ-100 и ВТГ-90</a>
+                        </li>
+                        <li>
+                            <a href="/" class="dropdown-item__hover">АГРОМАШ 90-ТГ</a>
+                        </li>
+                        <li>
+                            <a href="/" class="dropdown-item__hover">отвалы</a>
+                        </li>
+                        <li>
+                            <a href="/" class="dropdown-item__hover">навесное оборудование</a>
+                        </li>
+                        <li>
+                            <a href="/" class="dropdown-item__hover">запасные части</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" class="nav-item__hover">лизинг</a>
+                </li>
+                <li>
+                    <a href="/" class="nav-item__hover">госзакупки</a>
+                </li>
+                <li>
+                    <a href="/" class="nav-item__hover">НОВОСТИ</a>
+                </li>
+                <li>
+                    <a href="/" class="nav-item__hover">О КОМПАНИИ</a>
+                </li>
+                <li>
+                    <a href="/" class="nav-item__hover">КОНТАКТЫ</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="flex max-lg:flex-col min-h-screen">
+            <div class="lg:h-full md:h-[440px] h-[320px] lg:w-1/2">
+                <iframe class="h-full w-full" src="https://yandex.ru/map-widget/v1/?um=constructor%3Afb4d7a173e16c42b34dd7fadf80836872dbff5f555cd4805db3e33308e20b2d8&amp;source=constructor" frameborder="0"></iframe>
+            </div>
+            <div class="flex flex-col max-md:py-[60px] lg:pt-[90px] gap-6 bg-mainRed lg:w-1/2 xl:pl-[100px] lg:pl-20 md:pl-10 pl-10 z-10 relative overflow-hidden after:absolute xs:after:bottom-0 after:bottom-0 xs:after:right-0 after:-right-16 after:bg-[url(../assets/img/icon/contact-logo.svg)] after:bg-center after:bg-contain after:bg-no-repeat min-[1600px]:after:w-[540px] min-[1600px]:after:h-[330px] xl:after:w-[400px] xl:after:h-[250px] xs:after:w-[250px] xs:after:h-[200px] after:w-[200px] after:h-[130px] after:block after:content-[''] after:-z-10">
+                <img src="../src/assets/img/icon/contacts-logo.svg" class="w-[220px] object-contain" alt="">
+                <p class="second-title text-white">Контакты</p>
+                <ul class="flex flex-col gap-1.5">
+                    <li class="xs:text-sm text-xs font-semibold text-white">Адрес</li>
+                    <li>
+                        <p class="lg:text-xl xs:text-base text-sm font-bold text-white">г. Волгоград, ул. Дзержинского, 1</p>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-1.5">
+                    <li class="xs:text-sm text-xs font-semibold text-white">Горячая линия</li>
+                    <li>
+                        <a href="tel:88006000908" class="lg:text-xl xs:text-base text-sm font-bold text-white w-fit !leading-[1.25]">8 (800) 600 09 08</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-1.5">
+                    <li class="xs:text-sm text-xs font-semibold text-white">Отдел продаж</li>
+                    <li class="flex flex-col gap-1.5">
+                        <a href="tel:88442605045" class="lg:text-xl xs:text-base text-sm font-bold text-white w-fit !leading-[1.25]">8 (8442) 60 50 45</a>
+                        <a href="tel:88442605044" class="lg:text-xl xs:text-base text-sm font-bold text-white w-fit !leading-[1.25]">8 (8442) 60 50 44</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-3">
+                    <li class="xs:text-sm text-xs font-semibold text-white">Социальные сети</li>
+                    <li class="flex gap-2.5">
+                        <a href="/">
+                            <img src="../src/assets/img/icon/mail.svg" alt="">
+                        </a>
+                        <a href="/">
+                            <img src="../src/assets/img/icon/tg.svg" alt="">
+                        </a>
+                        <a href="/">
+                            <img src="../src/assets/img/icon/wa.svg" alt="">
+                        </a>
+                        <a href="/">
+                            <img src="../src/assets/img/icon/viber.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#1B1B24] lg:py-20 py-[60px]">
+        <div class="container flex flex-col gap-9">
+            <div class="flex max-xs:flex-col justify-between max-xs:items-center lg:items-center max-xs:gap-10">
+                <div class="flex max-md:flex-col lg:gap-16 gap-10">
+                    <a href="/">
+                        <img src="src/assets/img/icon/footer-logo.svg" alt="">
+                    </a>
+                    <div class="flex max-xs:flex-col lg:gap-16 xs:gap-8 gap-4">
+                        <ul class="footer-list flex flex-col max-xs:items-center xs:gap-y-3 gap-y-4">
+                            <li>
+                                <a href="/pages/about.html" class="footer-list__link">О компании</a>
+                            </li>
+                            <li>
+                                <a href="/pages/catalog.html" class="footer-list__link">Продукция</a>
+                            </li>
+                            <li>
+                                <a href="/pages/goszakupki.html" class="footer-list__link">Госзакупки</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list flex flex-col max-xs:items-center xs:gap-y-3 gap-y-4">
+                            <li>
+                                <a href="/pages/lizing.html" class="footer-list__link">Лизинг</a>
+                            </li>
+                            <li>
+                                <a href="/pages/contacts.html" class="footer-list__link">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="/pages/pay.html" class="footer-list__link">Оплата и доставка</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex max-lg:flex-col lg:gap-9 gap-6">
+                    <ul class="flex flex-col max-xs:text-center gap-1.5">
+                        <li class="xs:text-sm text-xs font-semibold text-white">Горячая линия</li>
+                        <li>
+                            <a href="tel:88006000908" class="xs:text-xl text-base font-bold text-white w-fit !leading-[1.25] footer-list__link">8 (800) 600 09 08</a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col max-xs:text-center gap-1.5">
+                        <li class="xs:text-sm text-xs font-semibold text-white">Отдел продаж</li>
+                        <li class="flex flex-col gap-1.5">
+                            <a href="tel:88442605045" class="xs:text-xl text-base font-bold text-white w-fit !leading-[1.25] footer-list__link">8 (8442) 60 50 45</a>
+                            <a href="tel:88442605044" class="xs:text-xl text-base font-bold text-white w-fit !leading-[1.25] footer-list__link">8 (8442) 60 50 44</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex max-xs:flex-col max-xs:items-center max-xs:gap-3 xs:justify-between xs:items-end">
+                <div class="flex items-center gap-1.5">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.85888 5.78483C9.27574 4.81535 8.21341 4.16634 7.00041 4.16634C5.1604 4.16634 3.66707 5.65967 3.66707 7.49968C3.66707 9.33968 5.1604 10.833 7.00041 10.833C8.21341 10.833 9.27574 10.184 9.85888 9.21454L8.71567 8.52914C8.36594 9.11074 7.72887 9.49968 7.00041 9.49968C5.89541 9.49968 5.00041 8.60468 5.00041 7.49968C5.00041 6.39468 5.89541 5.49967 7.00041 5.49967C7.72907 5.49967 8.36647 5.88892 8.71607 6.47088L9.85888 5.78483ZM13.6671 7.49968C13.6671 3.81966 10.6804 0.833008 7.00041 0.833008C3.32039 0.833008 0.33374 3.81966 0.33374 7.49968C0.33374 11.1797 3.32039 14.1663 7.00041 14.1663C10.6804 14.1663 13.6671 11.1797 13.6671 7.49968ZM1.66707 7.49968C1.66707 4.55298 4.05371 2.16634 7.00041 2.16634C9.94707 2.16634 12.3337 4.55298 12.3337 7.49968C12.3337 10.4463 9.94707 12.833 7.00041 12.833C4.05371 12.833 1.66707 10.4463 1.66707 7.49968Z" fill="white"/>
+                    </svg>
+                    <span class="xs:text-sm text-xs text-white font-semibold">2023 “ОАО ВГТЗ” Все права защищены </span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <a href="/">
+                        <img src="src/assets/img/icon/f-mail.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="src/assets/img/icon/f-tg.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="src/assets/img/icon/f-wa.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="src/assets/img/icon/f-viber.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../src/assets/libs/jquery.js"></script>
+    <script src="../src/assets/libs/swiper.js"></script>
+    <script src="../src/assets/js/custom.js"></script>
+    <script src="../src/assets/js/slider.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
