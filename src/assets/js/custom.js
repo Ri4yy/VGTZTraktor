@@ -19,6 +19,21 @@
         $('.dropdown-btn').find('img').toggleClass('rotate-dropdown__arrow');
     });
 
+    $(function(){
+        $nav = $('.fixed-header');
+        $window = $(window);
+        $h = $nav.offset().top;
+        $window.scroll(function(){
+            if ($window.scrollTop() > $h){
+                $nav.addClass('fixed');
+                $('main').addClass('mt-[42px]');
+            } else {
+                $nav.removeClass('fixed');
+                $('main').removeClass('mt-[42px]');
+            }
+        });
+    });
+
     $(function () {
         $('ul.tabs__caption').on('click', 'li:not(.active-tab)', function () {
             $(this)
