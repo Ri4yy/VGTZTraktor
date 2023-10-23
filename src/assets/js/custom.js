@@ -1,4 +1,5 @@
 (function ($) {
+    // Открытие мобильного меню
     $('#openMenu, .overlay').click(() => {
         $('#openMenu').find('span').eq(0).toggleClass('rotate-left');
         $('#openMenu').find('span').eq(0).toggleClass('top-0');
@@ -19,6 +20,7 @@
         $('.dropdown-btn').find('img').toggleClass('rotate-dropdown__arrow');
     });
 
+    // Фиксированная шапка при скролле
     $(window).on('load resize', () => {
         if($(window).width() > 1023) {
             $nav = $('.fixed-header');
@@ -37,8 +39,26 @@
             return 
         }
     })
+   
+    // Вкладки 
+    function tabs(wrapperMain, wrapperTab, wrapperContent, activeTab, activeContent) {
+        $(wrapperTab).on('click', 'li:not('+activeTab+')', function () {
+            $(this)
+                .addClass(activeTab).siblings().removeClass(activeTab)
+                .closest(wrapperMain).find(wrapperContent).removeClass(activeContent).eq($(this).index()).addClass(activeContent);
+        });
 
-    function tabsCatalog(list, btn, showEl) {
+        var tabIndex = window.location.hash.replace('#tab', '') - 1;
+        if (tabIndex != -1) $(wrapperTab+ ' li').eq(tabIndex).click();
+
+        $('a[href*=\\#tab]').click(function () {
+            var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '') - 1;
+            $(wrapperTab +' li').eq(tabIndex).click();
+        });
+    }
+
+    // Скрытие контента и кнопка "показать больше"
+    function viewMoreContent(list, btn, showEl) {
         var list = list;
         var numToShow = showEl; 
         var button = btn;
@@ -58,108 +78,22 @@
         });
     }
 
-    tabsCatalog($(".wrapper-news .news"), $(".more-btn__news"), 2);
+    // Вызов функций
+    tabs('.tabs', '.tabs__caption', '.tabs__content', 'active-tab', 'active');
+    tabs('.tabs-char', '.tabs-char__caption', '.tabs-char__content', 'active-tab__char', 'active-char__content');
+    viewMoreContent($(".wrapper-news .news"), $(".more-btn__news"), 2);
 
     $(document).ready(function() {
-        tabsCatalog($(".tabs__content.active  .wrapper-items .item"), $(".tabs__content.active").find(".more-btn"), 3);
-        // var list = $(".tabs__content.active  .wrapper-items .item");
-        // var numToShow = 3; 
-        // var button = $(".tabs__content.active").find(".more-btn")
-        // var numInList = list.length;
-        // list.hide();
-        // if (numInList > numToShow) {
-        // button.show();
-        // }
-        // list.slice(0, 6).show();
-        // button.click(function() {
-        // var showing = list.filter(':visible').length;
-        // list.slice(showing - 1, showing + numToShow).fadeIn();
-        // var nowShowing = list.filter(':visible').length;
-        // if (nowShowing >= numInList) {
-        //     button.hide();
-        // }
-        // });
+        viewMoreContent($(".tabs__content.active  .wrapper-items .item"), $(".tabs__content.active").find(".more-btn"), 3);
 
         $('.tabs__caption li').click((e) => {
-            tabsCatalog($(e.target).parents('.tabs').find('.tabs__content.active .wrapper-items .item'), $(".tabs__content.active").find(".more-btn"), 3);
-            // var list = $(e.target).parents('.tabs').find('.tabs__content.active .wrapper-items .item');
-            // var numToShow = 3; 
-            // var button = 
-            // var numInList = list.length;
-            // list.hide();
-            // if (numInList > numToShow) {
-            // button.show();
-            // }
-            // list.slice(0, 6).show();
-            // button.click(function() {
-            // var showing = list.filter(':visible').length;
-            // list.slice(showing - 1, showing + numToShow).fadeIn();
-            // var nowShowing = list.filter(':visible').length;
-            // if (nowShowing >= numInList) {
-            //     button.hide();
-            // }
-            // });
-        });
-
-
-        // console.log($('.tabs__content.active').find(".wrapper-items .item").length)
-        var list = $(".wrapper-items .item");
-        // var list = $('.tabs__content').find(".wrapper-items .item");
-        // if($('.tabs__content').hasClass('active')) {
-        // } else {
-        // }
-        // var numToShow = 3; 
-        // // var button = $(".more-btn")
-        // var button = $(".tabs__content.active").find(".more-btn")
-        // var numInList = list.length;
-        // list.hide();
-        // if (numInList > numToShow) {
-        // button.show();
-        // }
-        // list.slice(0, 6).show();
-        // button.click(function() {
-        // var showing = list.filter(':visible').length;
-        // list.slice(showing - 1, showing + numToShow).fadeIn();
-        // var nowShowing = list.filter(':visible').length;
-        // if (nowShowing >= numInList) {
-        //     button.hide();
-        // }
-        // });
-            
-      });
-
-    $(function () {
-        $('ul.tabs__caption').on('click', 'li:not(.active-tab)', function () {
-            $(this)
-                .addClass('active-tab').siblings().removeClass('active-tab')
-                .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-        });
-
-        var tabIndex = window.location.hash.replace('#tab', '') - 1;
-        if (tabIndex != -1) $('ul.tabs__caption li').eq(tabIndex).click();
-
-        $('a[href*=\\#tab]').click(function () {
-            var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '') - 1;
-            $('ul.tabs__caption li').eq(tabIndex).click();
+            setTimeout(() => {
+                viewMoreContent($(e.target).parents('.tabs').find('.tabs__content.active .wrapper-items .item'), $(".tabs__content.active").find(".more-btn"), 3);
+            }, 50)
         });
     });
 
-    $(function () {
-        $('ul.tabs-char__caption').on('click', 'li:not(.active-tab__char)', function () {
-            $(this)
-                .addClass('active-tab__char').siblings().removeClass('active-tab__char')
-                .closest('div.tabs-char').find('div.tabs-char__content').removeClass('active-char__content').eq($(this).index()).addClass('active-char__content');
-        });
-
-        var tabIndex = window.location.hash.replace('#tab', '') - 1;
-        if (tabIndex != -1) $('ul.tabs-char__caption li').eq(tabIndex).click();
-
-        $('a[href*=#tab]').click(function () {
-            var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '') - 1;
-            $('ul.tabs-char__caption li').eq(tabIndex).click();
-        });
-    });
-
+    // Модальное окно
     $('.popup-open').click(function() {
 		$('.popup-fade').show( );
         $('html').addClass('overflow-hidden');
