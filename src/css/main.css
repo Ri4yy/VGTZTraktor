@@ -4092,3 +4092,21 @@ a, button, li {
     width: 540px;
   }
 }
+
+.\[\&\*\>swiper-pagination-bullet-active\]\:transition-all*>swiper-pagination-bullet-active {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\[\&\*\>swiper-pagination-bullet\]\:transition-all*>swiper-pagination-bullet {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\[\&\>swiper-pagination-bullet-active\]\:transition-all>swiper-pagination-bullet-active {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

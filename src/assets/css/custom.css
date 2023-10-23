@@ -16,6 +16,9 @@
         background-color: #fff;
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
         opacity: 1;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
     }
     
     .swiper-pagination > .swiper-pagination-bullet-active {
@@ -23,6 +26,9 @@
         height: 10px;
         border-radius: 10px;
         background-color: #D53029;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
     }
     .swiper-pagination-partners > .swiper-pagination-bullet,
     .swiper-pagination-news > .swiper-pagination-bullet,
