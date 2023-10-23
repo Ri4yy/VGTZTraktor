@@ -1,7 +1,6 @@
 @layer base, vendors, components;
 
 @import url('swiper.css') layer(vendors);
-/* @import url('tailwindElements.css'); */
 
 @layer components {
     html,

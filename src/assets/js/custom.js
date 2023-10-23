@@ -19,48 +19,112 @@
         $('.dropdown-btn').find('img').toggleClass('rotate-dropdown__arrow');
     });
 
-    $(function(){
-        $nav = $('.fixed-header');
-        $window = $(window);
-        $h = $nav.offset().top;
-        $window.scroll(function(){
-            if ($window.scrollTop() > $h){
-                $nav.addClass('fixed');
-                $('main').addClass('mt-[42px]');
-            } else {
-                $nav.removeClass('fixed');
-                $('main').removeClass('mt-[42px]');
-            }
+    $(window).on('load resize', () => {
+        if($(window).width() > 1023) {
+            $nav = $('.fixed-header');
+            $window = $(window);
+            $h = $nav.offset().top;
+            $window.scroll(function(){
+                if ($window.scrollTop() > $h){
+                    $nav.addClass('fixed');
+                    $('main').addClass('mt-[42px]');
+                } else {
+                    $nav.removeClass('fixed');
+                    $('main').removeClass('mt-[42px]');
+                }
+            });
+        } else {
+            return 
+        }
+    })
+
+    function tabsCatalog(list, btn, showEl) {
+        var list = list;
+        var numToShow = showEl; 
+        var button = btn;
+        var numInList = list.length;
+        list.hide();
+        if (numInList > numToShow) {
+        button.show();
+        }
+        list.slice(0, 6).show();
+        button.click(function() {
+        var showing = list.filter(':visible').length;
+        list.slice(showing - 1, showing + numToShow).fadeIn();
+        var nowShowing = list.filter(':visible').length;
+        if (nowShowing >= numInList) {
+            button.hide();
+        }
         });
-    });
+    }
+
+    tabsCatalog($(".wrapper-news .news"), $(".more-btn__news"), 2);
 
     $(document).ready(function() {
-                console.log($('.tabs__content.active').find(".wrapper-items .item").length)
-                // var list = $(".wrapper-items .item");
-                var listActive = $('.tabs__content.active').find(".wrapper-items .item");
-                var list = $('.tabs__content').find(".wrapper-items .item");
-                // if($('.tabs__content').hasClass('active')) {
-                // } else {
-                // }
-                var numToShow = 3; 
-                // var button = $(".more-btn")
-                var button = $(".tabs__content.active").find(".more-btn")
-                var numInList = list.length;
-                listActive.hide();
-                list.hide();
-                if (numInList > numToShow) {
-                button.show();
-                }
-                listActive.slice(0, 6).show();
-                list.slice(0, 6).show();
-                button.click(function() {
-                var showing = list.filter(':visible').length;
-                list.slice(showing - 1, showing + numToShow).fadeIn();
-                var nowShowing = list.filter(':visible').length;
-                if (nowShowing >= numInList) {
-                    button.hide();
-                }
-                });
+        tabsCatalog($(".tabs__content.active  .wrapper-items .item"), $(".tabs__content.active").find(".more-btn"), 3);
+        // var list = $(".tabs__content.active  .wrapper-items .item");
+        // var numToShow = 3; 
+        // var button = $(".tabs__content.active").find(".more-btn")
+        // var numInList = list.length;
+        // list.hide();
+        // if (numInList > numToShow) {
+        // button.show();
+        // }
+        // list.slice(0, 6).show();
+        // button.click(function() {
+        // var showing = list.filter(':visible').length;
+        // list.slice(showing - 1, showing + numToShow).fadeIn();
+        // var nowShowing = list.filter(':visible').length;
+        // if (nowShowing >= numInList) {
+        //     button.hide();
+        // }
+        // });
+
+        $('.tabs__caption li').click((e) => {
+            tabsCatalog($(e.target).parents('.tabs').find('.tabs__content.active .wrapper-items .item'), $(".tabs__content.active").find(".more-btn"), 3);
+            // var list = $(e.target).parents('.tabs').find('.tabs__content.active .wrapper-items .item');
+            // var numToShow = 3; 
+            // var button = 
+            // var numInList = list.length;
+            // list.hide();
+            // if (numInList > numToShow) {
+            // button.show();
+            // }
+            // list.slice(0, 6).show();
+            // button.click(function() {
+            // var showing = list.filter(':visible').length;
+            // list.slice(showing - 1, showing + numToShow).fadeIn();
+            // var nowShowing = list.filter(':visible').length;
+            // if (nowShowing >= numInList) {
+            //     button.hide();
+            // }
+            // });
+        });
+
+
+        // console.log($('.tabs__content.active').find(".wrapper-items .item").length)
+        var list = $(".wrapper-items .item");
+        // var list = $('.tabs__content').find(".wrapper-items .item");
+        // if($('.tabs__content').hasClass('active')) {
+        // } else {
+        // }
+        // var numToShow = 3; 
+        // // var button = $(".more-btn")
+        // var button = $(".tabs__content.active").find(".more-btn")
+        // var numInList = list.length;
+        // list.hide();
+        // if (numInList > numToShow) {
+        // button.show();
+        // }
+        // list.slice(0, 6).show();
+        // button.click(function() {
+        // var showing = list.filter(':visible').length;
+        // list.slice(showing - 1, showing + numToShow).fadeIn();
+        // var nowShowing = list.filter(':visible').length;
+        // if (nowShowing >= numInList) {
+        //     button.hide();
+        // }
+        // });
             
       });
 
@@ -74,7 +138,7 @@
         var tabIndex = window.location.hash.replace('#tab', '') - 1;
         if (tabIndex != -1) $('ul.tabs__caption li').eq(tabIndex).click();
 
-        $('a[href*=#tab]').click(function () {
+        $('a[href*=\\#tab]').click(function () {
             var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '') - 1;
             $('ul.tabs__caption li').eq(tabIndex).click();
         });
