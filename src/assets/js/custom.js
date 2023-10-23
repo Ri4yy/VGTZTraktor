@@ -23,15 +23,15 @@
     // Фиксированная шапка при скролле
     $(window).on('load resize', () => {
         if($(window).width() > 1023) {
-            $nav = $('.fixed-header');
-            $window = $(window);
-            $h = $nav.offset().top;
-            $window.scroll(function(){
-                if ($window.scrollTop() > $h){
-                    $nav.addClass('fixed');
+            let nav = $('.fixed-header');
+            let windows = $(window);
+            let h = nav.offset().top;
+            windows.scroll(function(){
+                if (windows.scrollTop() > h){
+                    nav.addClass('fixed');
                     $('main').addClass('mt-[42px]');
                 } else {
-                    $nav.removeClass('fixed');
+                    nav.removeClass('fixed');
                     $('main').removeClass('mt-[42px]');
                 }
             });

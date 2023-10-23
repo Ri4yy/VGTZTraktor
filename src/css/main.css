@@ -1289,6 +1289,14 @@ video {
   background-image: url(../assets/img/bg/bg-zakupki.png);
 }
 
+.bg-\[url\(\.\.\/assets\/img\/bg\/bg-slider\.webp\)\] {
+  background-image: url(../assets/img/bg/bg-slider.webp);
+}
+
+.bg-\[url\(\.\.\/assets\/img\/bg\/bg-zakupki\.webp\)\] {
+  background-image: url(../assets/img/bg/bg-zakupki.webp);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -4049,6 +4057,10 @@ a, button, li {
   .xl\:gap-x-\[100px\] {
     -moz-column-gap: 100px;
          column-gap: 100px;
+  }
+
+  .xl\:overflow-x-auto {
+    overflow-x: auto;
   }
 
   .xl\:px-16 {
