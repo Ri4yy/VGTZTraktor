@@ -121,7 +121,7 @@ const swiperCompany = new Swiper('.swiper-company', {
       },
       1280: {
         allowTouchMove: true,
-        slidesPerView: 6,
+        slidesPerView: 4,
         grid: {
           rows: 2,
           fill: "row",
